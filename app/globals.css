@@ -1,34 +1,56 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors for Light Mode - Exact as Blackbox Preview */
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(222.2 84% 4.9%);
-  --color-primary: hsl(330 100% 70%); /* Bright Pink/Pinkish-Purple */
-  --color-secondary: hsl(45 100% 96%); /* Very Light Yellow for sections */
-  --color-accent: hsl(45 100% 90%);
-  --color-border: hsl(214.3 31.8% 91.4%);
+--color-background: hsl(0 0% 100%);
+--color-foreground: hsl(222.2 84% 4.9%);
+--color-primary: hsl(322 100% 74%);
+--color-secondary: hsl(48 100% 96%);
+--color-accent: hsl(199 89% 82%);
+--color-border: hsl(214.3 31.8% 91.4%);
 }
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --primary: 330 100% 70%;
-  --secondary: 45 100% 96%;
-  --muted: 210 40% 96.1%;
-  --accent: 45 100% 90%;
-  --border: 214.3 31.8% 91.4%;
-  --radius: 0.75rem;
+--background: 0 0% 100%;
+--foreground: 222.2 84% 4.9%;
+--primary: 322 100% 74%;
+--secondary: 48 100% 96%;
+--border: 214.3 31.8% 91.4%;
+--radius: 1.5rem;
 }
 
-/* Force light background */
 body {
-  background-color: white !important;
-  color: #0f172a !important;
-  font-family: sans-serif;
+background-color: white !important;
+color: #1a1a1a !important;
+font-family: 'Outfit', 'Inter', sans-serif !important;
+letter-spacing: -0.02em;
 }
 
-/* Section styling for that yellow touch */
+/* Sections padding - making it breathe like the original */
+section {
+padding-top: 5rem !important;
+padding-bottom: 5rem !important;
+}
+
 section:nth-child(even) {
-  background-color: hsl(var(--secondary)) !important;
+background-color: #fffbeb !important; /* Soft honey yellow */
+}
+
+/* Rounded Buttons */
+button, .btn {
+border-radius: 9999px !important;
+font-weight: 600 !important;
+padding: 0.75rem 2rem !important;
+transition: all 0.3s ease;
+}
+
+button:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 15px -3px rgba(255, 123, 196, 0.4);
+}
+
+/* Cards styling */
+.card, [class*="rounded-xl"] {
+border-radius: 2rem !important;
+border: 1px solid #f1f5f9 !important;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
 }
